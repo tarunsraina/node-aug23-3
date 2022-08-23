@@ -1,0 +1,28 @@
+<% include('../layouts/header.ejs') %>
+
+<h1>Employee registration form</h1>
+
+<form action="" method="post">
+
+    <input type="text" name="name" placeholder="name" required>
+    <br><br>
+    <input type="text" name="email" placeholder="email" required>
+    <br><br>
+    <input type="text" name="mobile" placeholder="mobile" required>
+    <br><br>
+    <input type="submit" value="Submit">
+
+</form>
+
+<h1 style="color : green;"> <%= locals.message?message:"" %> </h1>
+
+
+
+<hr>
+
+
+<a href="/verify">Find registered user here</a> 
+
+
+
+<% include('../layouts/footer.ejs') %>
