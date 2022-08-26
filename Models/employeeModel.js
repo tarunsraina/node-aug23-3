@@ -1,8 +1,8 @@
 
 const mongoose = require('mongoose')
 
-const DB = process.env.MONGODB_URI;
-mongoose.connect(DB||'mongodb+srv://tarun:blacy728@tarun-cluster.2sk5aum.mongodb.net/?retryWrites=true&w=majority').then(()=>console.log("mongo sucesss")).catch((err)=>console.log("error:"+err));
+
+mongoose.connect(process.env.MONGODB_URI as String ||'mongodb+srv://tarun:blacy728@tarun-cluster.2sk5aum.mongodb.net/?retryWrites=true&w=majority').then(()=>console.log("mongo sucesss")).catch((err)=>console.log("error:"+err));
 
 const employee = mongoose.Schema({
     name : {
